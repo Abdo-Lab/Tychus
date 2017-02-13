@@ -3,7 +3,7 @@
 -->
 
 [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextflow-tychus/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-[![CircleCI status](https://circleci.com/gh/cdeanj/Tychus.svg?style=svg)](https://circleci.com/gh/cdeanj/Tychus)
+[![CircleCI status](https://circleci.com/gh/cdeanj/Tychus.png?style=shield)](https://circleci.com/gh/cdeanj/Tychus)
 
 Tychus: A tool to characterize the bacterial genome.
 ====================================================
@@ -122,7 +122,7 @@ The download time will take between 5 and 10 minutes depending on your connectio
 
 Run a Test
 ==========
-It is `recommended` that you run these tests for both the `alignment` and `assembly` modules before doing any large-scale analysis. This serves the purpose of getting you comfortable with running each Tychus module, as well as providing you with real output, which you can look back upon later when you get to the [Results](https://github.com/cdeanj/nextflow-tychus#results) section. The reads used in each test were produced with [Art](https://www.niehs.nih.gov/research/resources/software/biostatistics/art/), an artificial read simulator, and constructed with 20x-30x coverage.
+It is `recommended` that you run these tests for both the `alignment` and `assembly` modules before doing any large-scale analysis. This serves the purpose of getting you comfortable with running each Tychus module, as well as providing you with real output, which you can look back upon later when you get to the [Results](https://github.com/cdeanj/nextflow-tychus#results) section. The reads used in each test were produced with [Art](https://www.niehs.nih.gov/research/resources/software/biostatistics/art/), an artificial read simulator, and constructed with 10x-15x coverage.
 
 Alignment Module
 ----------------
@@ -136,7 +136,7 @@ Results should be produced shortly, and you will see the following message:
 Nextflow Version:	0.23.0
 Command Line:		nextflow run alignment.nf -profile alignment --threads 2 --output my_alignment_output
 Container:			abdolab/tychus-alignment
-Duration:			5m 28s
+Duration:			2m 28s
 Output Directory:	/home/username/nextflow-tychus/my_alignment_output
 ```
 
@@ -152,7 +152,7 @@ Since we are doing *de novo* assemblies, this could take a while, but hopefully 
 Nextflow Version:       0.23.0
 Command Line:           nextflow run assembly.nf -profile assembly --threads 2 --output my_assembly_output
 Container:              abdolab/tychus-assembly
-Duration:               15m 28s
+Duration:               5m 37s
 Output Directory:       /home/username/nextflow-tychus/my_assembly_output
 ```
 
@@ -195,6 +195,7 @@ kSNP Options:
     --ML              BOOL		Estimate maximum likelihood tree
     --NJ              BOOL		Estimate neighbor joining tree
     --min_frac        DECIMAL	Minimum fraction of genomes with locus
+    --draft           DIR		Path to the FASTA formatted draft genomes
 
 Figtree Options: 
     --JPEG            BOOL		Convert newick tree to annotated JPEG
@@ -273,6 +274,11 @@ By default, maximum likelihood (ML) trees are computed with kSNP. Although this 
 $ nextflow alignment.nf -profile alignment --read_pairs "tutorial/raw_sequence_data/*_R{1,2}_001.fastq.gz" --NJ --min_frac 0.85
 ```
 
+In addition, SNPs and SNP phylogenies can be built from draft genomes.
+```
+$ nextflow alignment.nf -profile alignment --read_pairs "tutorial/raw_sequence_data/*_R{1,2}_001.fastq.gz" --draft "draft/*.fa"
+```
+
 Figtree Options
 ---------------
 By deafult the SNP phylogenies produced by kSNP are written to a [Newick](https://en.wikipedia.org/wiki/Newick_format) formatted `.tre` file. Figtree is used to produce phylogenies in the image format of your choosing. By default, SNP phylognies are annotated and saved as PNG images. To change this, simply specify an alternative image format (JPEG,PDF,SVG).
@@ -289,7 +295,7 @@ $ nextflow assembly.nf -profile assembly --read_pairs "tutorial/raw_sequence_dat
 
 Database Options
 ----------------
-If you would like to specify an alternative `reference`, `virulence`, `plasmid` or `resistance` database than the ones provided, you can do that as well.
+To include an alternative `reference`, `virulence`, `plasmid`, or `resistance` database, you can do that as well.
 ```
 $ nextflow alignment.nf -profile alignment --read_pairs "tutorial/raw_sequence_data/*_R{1,2}_001.fastq.gz" --ref_db "path/to/your/reference/db/ref.fa" --vf_db "path/to/your/virulence/db/vf.fa" --plasmid_db "path/to/your/plasmid/db/plasmid.fa" --amr_db "path/to/your/resistance/db/resistance.fa"
 ```
