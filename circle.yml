@@ -1,0 +1,16 @@
+machine:
+  java:
+    version: oraclejdk8
+  services:
+    - docker
+  environment:
+    PROFILE: test
+
+test:
+  override:
+    - curl -fsSL get.nextflow.io | bash
+    - ./nextflow
+    - docker pull abdolab/tychus-alignment
+    - docker pull abdolab/tychus-assembly
+    - ./nextflow alignment.nf -profile alignment --threads 4 --output alignment_test
+    - ./nextflow assembly.nf -profile assembly --threads 4 --output assembly_test
