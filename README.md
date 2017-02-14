@@ -126,7 +126,7 @@ It is `recommended` that you run these tests for both the `alignment` and `assem
 
 Alignment Module
 ----------------
-Included in the `alignment` module are four databases: a resistance, virulence, plasmid, and reference. These are used by default when running data through this module. The simulated reads mentioned above are also used and can be found in the `tutorial/raw_sequence_data/` directory. To get started, run the following command within the `nextflow-tychus/` directory:
+Included in the `alignment` module is a small E. coli reference database as well as three paired read files. These are used by default when running data through this module. To get started, run the following command within the `nextflow-tychus/` directory:
 ```
 $ nextflow alignment.nf -profile alignment --threads 2 --output my_alignment_output
 ```
