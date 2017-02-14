@@ -3,7 +3,7 @@
 -->
 
 [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextflow-tychus/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-[![CircleCI status](https://circleci.com/gh/cdeanj/Tychus.png?style=shield)](https://circleci.com/gh/cdeanj/Tychus)
+[![CircleCI status](https://circleci.com/gh/cdeanj/Tychus.png?style=shield&circle-token=8be6dead6f6181b2e3413f43f9542141a08b8381)](https://circleci.com/gh/cdeanj/Tychus)
 
 Tychus: A tool to characterize the bacterial genome.
 ====================================================
