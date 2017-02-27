@@ -105,8 +105,8 @@ Install Tychus Pipeline
 -----------------------
 The Tychus pipeline can be pulled and installed from Github with the following command:
 ```
-$ git clone https://github.com/cdeanj/nextflow-tychus.git
-$ cd nextflow-tychus/
+$ git clone https://github.com/Abdo-Lab/Tychus.git
+$ cd Tychus/
 ```
 
 Install Docker Images
@@ -351,6 +351,7 @@ Software | Function
 [BCFtools](https://github.com/samtools/bcftools) | `Used to generate consensus sequences from VCF formatted SNPs.`
 [Bowtie2](https://github.com/BenLangmead/bowtie2) | `Used to align short fragments of DNA to a reference genome.`
 [CISA](http://sb.nhri.org.tw/CISA/en/CISA) | `Used to integrate assembly contigs into a super assembly.`
+[CSA](https://github.com/cdeanj/coverage_sampler) | `Used to generate coverage statistics from a sample of alignments.`
 [Docker](https://www.docker.com/what-docker) | `Software containerization platform used to resolve the dependencies listed here.`
 [Figtree](http://tree.bio.ed.ac.uk/software/figtree/) | `Used to create images from Newick formatted phylogenies.`
 [IDBA-UD](https://github.com/loneknightpy/idba) | `Used to produce assembly contigs.`
