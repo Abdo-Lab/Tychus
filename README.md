@@ -11,23 +11,23 @@ Tychus: A tool to characterize the bacterial genome.
 Table of Contents
 -----------------
 
-[Overview](https://github.com/cdeanj/nextflow-tychus#overview)
+[Overview](https://github.com/Abdo-Lab/Tychus#overview)
 
-[Requirements](https://github.com/cdeanj/nextflow-tychus#requirements)
+[Requirements](https://github.com/Abdo-Lab/Tychus#requirements)
 
-[Quickstart](https://github.com/cdeanj/nextflow-tychus#quickstart)
+[Quickstart](https://github.com/Abdo-Lab/Tychus#quickstart)
 
-[Run a Test](https://github.com/cdeanj/nextflow-tychus#run-a-test)
+[Run a Test](https://github.com/Abdo-Lab/Tychus#run-a-test)
 
-[Options](https://github.com/cdeanj/nextflow-tychus#pipeline-options)
+[Options](https://github.com/Abdo-Lab/Tychus#pipeline-options)
 
-[Example Usage](https://github.com/cdeanj/nextflow-tychus#example-usage)
+[Example Usage](https://github.com/Abdo-Lab/Tychus#example-usage)
 
-[Results](https://github.com/cdeanj/nextflow-tychus#results)
+[Results](https://github.com/Abdo-Lab/Tychus#results)
 
-[Dependencies](https://github.com/cdeanj/nextflow-tychus#dependencies)
+[Dependencies](https://github.com/Abdo-Lab/Tychus#dependencies)
 
-[Contact](https://github.com/cdeanj/nextflow-tychus#contact)
+[Contact](https://github.com/Abdo-Lab/Tychus#contact)
 
 -----------------
 
